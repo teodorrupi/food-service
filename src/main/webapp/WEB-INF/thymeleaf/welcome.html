@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 
 <head th:replace="fragments/headTag :: headTag">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
@@ -32,10 +32,11 @@
             <div class="navbar-inner">
                 <ul class="nav">
                     <li style="width: 100px;"><a href="#" th:href="@{/}"><i class="icon-home"></i>Home</a></li>
-                    <li style="width: 130px;"><a href="./owners/findOwners.html" th:href="@{/owners/find.html}"><i class="icon-search"></i>Find owners</a></li>
-                    <li style="width: 140px;"><a href="./vets/vetList.html" th:href="@{/vets.html}"><i class="icon-th-list"></i>Veterinarians</a></li>
+                    <li style="width: 130px;"><a href="./designers.html" th:href="@{/designers.html}"><i class="icon-search"></i>Find owners</a></li>
+                    <li style="width: 140px;"><a href="./vets/designers.html" th:href="@{/designers.html}"><i class="icon-th-list"></i>Veterinarians</a></li>
                     <li style="width: 90px;"><a href="./exception.html" th:href="@{/oups.html}" title="trigger a RuntimeException to see how it is handled"><i class="icon-warning-sign"></i>Error</a></li>
                     <li style="width: 80px;"><a href="#" title="not available yet. Work in progress!!"><i class=" icon-question-sign"></i>Help</a></li>
+                    <li style="width: 80px;"><a href="./designers.html" title="not available yet. Work in progress!!"><i class=" icon-question-sign"></i>Designers</a></li>
                 </ul>
             </div>
         </div>
@@ -53,7 +54,7 @@
             <td align="right">
                <img src="../../resources/images/springsource-logo.png"
                     th:src="@{/resources/images/springsource-logo.png}"
-                    alt="Sponsored by SpringSource" />
+                    alt="Sponsored by SpringSourcewlkjer" />
             </td>
         </tr>
     </table>
