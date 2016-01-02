@@ -15,6 +15,8 @@
  */
 package com.mcheck.repository.springdatajpa;
 
+import com.mcheck.model.Client;
+import com.mcheck.repository.ClientRepository;
 import org.springframework.data.repository.Repository;
 import org.springframework.samples.petclinic.model.Vet;
 import org.springframework.samples.petclinic.repository.VetRepository;
@@ -25,5 +27,5 @@ import org.springframework.samples.petclinic.repository.VetRepository;
  * @author Michael Isvy
  * @since 15.1.2013
  */
-public interface SpringDataClientRepository extends VetRepository, Repository<Vet, Integer> {
+public interface SpringDataClientRepository extends ClientRepository, Repository<Client, Integer> {
 }

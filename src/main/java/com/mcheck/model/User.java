@@ -3,9 +3,9 @@ package com.mcheck.model;
 import javax.persistence.MappedSuperclass;
 
 /**
- * Entity for all sorts of producing properties
- * @author trupi
+ * Entity for all sorts of buying/user-related properties
+ * @author Teodor Rupi
  */
 @MappedSuperclass
-public class User {
+public class User extends BaseEntity{
 }

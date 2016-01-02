@@ -15,37 +15,34 @@
  */
 package com.mcheck.service;
 
-import java.util.Collection;
-
+import com.mcheck.model.Client;
 import org.springframework.dao.DataAccessException;
-import org.springframework.samples.petclinic.model.Owner;
-import org.springframework.samples.petclinic.model.Pet;
-import org.springframework.samples.petclinic.model.PetType;
-import org.springframework.samples.petclinic.model.Vet;
-import org.springframework.samples.petclinic.model.Visit;
+import org.springframework.samples.petclinic.model.*;
+
+import java.util.Collection;
 
 
 /**
- * Mostly used as a facade for all Petclinic controllers
- *
- * @author Michael Isvy
+ * @author Teodor Rupi
  */
 public interface ClientService {
 
-    public Collection<PetType> findPetTypes() throws DataAccessException;
+//    public Collection<PetType> findPetTypes() throws DataAccessException;
+//
+//    public Owner findOwnerById(int id) throws DataAccessException;
+//
+//    public Pet findPetById(int id) throws DataAccessException;
+//
+//    public void savePet(Pet pet) throws DataAccessException;
+//
+//    public void saveVisit(Visit visit) throws DataAccessException;
 
-    public Owner findOwnerById(int id) throws DataAccessException;
+    public Collection<Client> findClients(String foo) throws DataAccessException;
 
-    public Pet findPetById(int id) throws DataAccessException;
+    public Collection<Client> findClientsWithParams(String location, String speciality) throws DataAccessException;
 
-    public void savePet(Pet pet) throws DataAccessException;
-
-    public void saveVisit(Visit visit) throws DataAccessException;
-
-    public Collection<Vet> findVets() throws DataAccessException;
-
-    public void saveOwner(Owner owner) throws DataAccessException;
-
-    Collection<Owner> findOwnerByLastName(String lastName) throws DataAccessException;
+//    public void saveOwner(Owner owner) throws DataAccessException;
+//
+//    Collection<Owner> findOwnerByLastName(String lastName) throws DataAccessException;
 
 }

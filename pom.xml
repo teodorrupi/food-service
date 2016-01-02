@@ -369,6 +369,17 @@
              <version>${aspectj.version}</version>
              <scope>runtime</scope>
          </dependency>
+
+            <!-- Spring Apache Solr-->
+            <!-- Spring Data Solr, part of the larger Spring Data family,
+            provides easy configuration and access to Apache Solr Search
+            Server from Spring applications. It offers both low-level
+            and high-level abstractions for interacting with the store.-->
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-solr</artifactId>
+            <version>1.5.2.RELEASE</version>
+        </dependency>
          
        </dependencies>
 

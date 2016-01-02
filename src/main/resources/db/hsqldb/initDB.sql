@@ -5,7 +5,14 @@ DROP TABLE visits IF EXISTS;
 DROP TABLE pets IF EXISTS;
 DROP TABLE types IF EXISTS;
 DROP TABLE owners IF EXISTS;
+DROP TABLE clients IF EXISTS;
 
+CREATE TABLE clients (
+  id              INTEGER IDENTITY PRIMARY KEY,
+  registered_name VARCHAR(30),
+  location        VARCHAR(30)
+);
+CREATE INDEX clients_registered_name ON clients (registered_name);
 
 CREATE TABLE vets (
   id         INTEGER IDENTITY PRIMARY KEY,

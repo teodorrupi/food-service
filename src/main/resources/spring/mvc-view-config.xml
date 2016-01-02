@@ -51,6 +51,7 @@
                     <!-- found, which might cause exceptions (e.g. ThymeleafView does not have a     -->
                     <!-- 'marshaller' property).                                                     -->
                     <property name="excludedViewNames" value="*.xml" />
+                    <property name="characterEncoding" value="UTF-8" />
                 </bean>
         
                  <!-- Default viewClass: JSTL view (JSP with html output) -->

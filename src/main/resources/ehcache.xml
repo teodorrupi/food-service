@@ -4,7 +4,7 @@
     <diskStore path="java.io.tmpdir"/>
 
     <!-- objects are evicted from the cache every 60 seconds -->
-    <cache name="vets"
+    <cache name="clients"
            timeToLiveSeconds="60"
            maxElementsInMemory="100"
            eternal="false"

@@ -15,27 +15,24 @@
  */
 package com.mcheck.repository.jpa;
 
-import java.util.Collection;
-
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-
+import com.mcheck.model.Client;
+import com.mcheck.repository.ClientRepository;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.samples.petclinic.model.Vet;
 import org.springframework.samples.petclinic.repository.VetRepository;
 import org.springframework.stereotype.Repository;
 
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import java.util.Collection;
+
 /**
  * JPA implementation of the {@link VetRepository} interface.
  *
- * @author Mike Keith
- * @author Rod Johnson
- * @author Sam Brannen
- * @author Michael Isvy
- * @since 22.4.2006
+ * @author Teodor Rupi
  */
 @Repository
-public class JpaClientRepositoryImpl implements VetRepository {
+public class JpaClientRepositoryImpl implements ClientRepository {
 
     @PersistenceContext
     private EntityManager em;
@@ -44,7 +41,14 @@ public class JpaClientRepositoryImpl implements VetRepository {
     @Override
     @Cacheable(value = "vets")
     @SuppressWarnings("unchecked")
-    public Collection<Vet> findAll() {
+    public Collection<Client> findAll(String foo) {
+        return this.em.createQuery("SELECT vet FROM Vet vet join fetch vet.specialties ORDER BY vet.lastName, vet.firstName").getResultList();
+    }
+
+    @Override
+    @Cacheable(value = "vets")
+    @SuppressWarnings("unchecked")
+    public Collection<Client> findAllWithParams(String foo, String faa) {
         return this.em.createQuery("SELECT vet FROM Vet vet join fetch vet.specialties ORDER BY vet.lastName, vet.firstName").getResultList();
     }
 
